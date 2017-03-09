@@ -11,6 +11,11 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class CarrierCodeType
 {
     /**
+     * Constant for value 'FDXC'
+     * @return string 'FDXC'
+     */
+    const VALUE_FDXC = 'FDXC';
+    /**
      * Constant for value 'FDXE'
      * @return string 'FDXE'
      */
@@ -20,6 +25,16 @@ class CarrierCodeType
      * @return string 'FDXG'
      */
     const VALUE_FDXG = 'FDXG';
+    /**
+     * Constant for value 'FXCC'
+     * @return string 'FXCC'
+     */
+    const VALUE_FXCC = 'FXCC';
+    /**
+     * Constant for value 'FXFR'
+     * @return string 'FXFR'
+     */
+    const VALUE_FXFR = 'FXFR';
     /**
      * Constant for value 'FXSP'
      * @return string 'FXSP'
@@ -37,16 +52,22 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_FDXC
      * @uses self::VALUE_FDXE
      * @uses self::VALUE_FDXG
+     * @uses self::VALUE_FXCC
+     * @uses self::VALUE_FXFR
      * @uses self::VALUE_FXSP
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
+            self::VALUE_FDXC,
             self::VALUE_FDXE,
             self::VALUE_FDXG,
+            self::VALUE_FXCC,
+            self::VALUE_FXFR,
             self::VALUE_FXSP,
         );
     }

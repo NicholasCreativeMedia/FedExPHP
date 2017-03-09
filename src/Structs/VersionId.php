@@ -16,7 +16,7 @@ class VersionId extends AbstractStructBase
      * The ServiceId
      * Meta informations extracted from the WSDL
      * - documentation: Identifies a system or sub-system which performs an operation.
-     * - fixed: vacs
+     * - fixed: trck
      * - minOccurs: 1
      * @var string
      */
@@ -25,7 +25,7 @@ class VersionId extends AbstractStructBase
      * The Major
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the service business level.
-     * - fixed: 6
+     * - fixed: 12
      * - minOccurs: 1
      * @var int
      */
