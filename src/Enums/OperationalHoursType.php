@@ -3,28 +3,26 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for OperationalHoursType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class OperationalHoursType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'CLOSED_ALL_DAY'
+     * @return string 'CLOSED_ALL_DAY'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_CLOSED_ALL_DAY = 'CLOSED_ALL_DAY';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'OPEN_ALL_DAY'
+     * @return string 'OPEN_ALL_DAY'
      */
-    const VALUE_FDXG = 'FDXG';
+    const VALUE_OPEN_ALL_DAY = 'OPEN_ALL_DAY';
     /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
+     * Constant for value 'OPEN_BY_HOURS'
+     * @return string 'OPEN_BY_HOURS'
      */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_OPEN_BY_HOURS = 'OPEN_BY_HOURS';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +35,17 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_CLOSED_ALL_DAY
+     * @uses self::VALUE_OPEN_ALL_DAY
+     * @uses self::VALUE_OPEN_BY_HOURS
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_CLOSED_ALL_DAY,
+            self::VALUE_OPEN_ALL_DAY,
+            self::VALUE_OPEN_BY_HOURS,
         );
     }
     /**

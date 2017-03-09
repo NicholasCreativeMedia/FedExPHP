@@ -3,28 +3,21 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for CloseTimeType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class CloseTimeType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'CUSTOMER_SPECIFIED'
+     * @return string 'CUSTOMER_SPECIFIED'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_CUSTOMER_SPECIFIED = 'CUSTOMER_SPECIFIED';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'DEFAULT'
+     * @return string 'DEFAULT'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_DEFAULT = 'DEFAULT';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +30,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_CUSTOMER_SPECIFIED
+     * @uses self::VALUE_DEFAULT
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_CUSTOMER_SPECIFIED,
+            self::VALUE_DEFAULT,
         );
     }
     /**

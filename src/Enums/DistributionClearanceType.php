@@ -3,28 +3,21 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for DistributionClearanceType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class DistributionClearanceType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'DESTINATION_COUNTRY_CLEARANCE'
+     * @return string 'DESTINATION_COUNTRY_CLEARANCE'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_DESTINATION_COUNTRY_CLEARANCE = 'DESTINATION_COUNTRY_CLEARANCE';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'SINGLE_POINT_OF_CLEARANCE'
+     * @return string 'SINGLE_POINT_OF_CLEARANCE'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_SINGLE_POINT_OF_CLEARANCE = 'SINGLE_POINT_OF_CLEARANCE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +30,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_DESTINATION_COUNTRY_CLEARANCE
+     * @uses self::VALUE_SINGLE_POINT_OF_CLEARANCE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_DESTINATION_COUNTRY_CLEARANCE,
+            self::VALUE_SINGLE_POINT_OF_CLEARANCE,
         );
     }
     /**

@@ -3,28 +3,23 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for LocationAccessibilityType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Indicates how this can be accessed.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class LocationAccessibilityType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'INSIDE'
+     * @return string 'INSIDE'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_INSIDE = 'INSIDE';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'OUTSIDE'
+     * @return string 'OUTSIDE'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_OUTSIDE = 'OUTSIDE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +32,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_INSIDE
+     * @uses self::VALUE_OUTSIDE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_INSIDE,
+            self::VALUE_OUTSIDE,
         );
     }
     /**

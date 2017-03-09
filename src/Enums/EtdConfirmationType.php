@@ -3,28 +3,23 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for EtdConfirmationType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Specifies whether to confirm documents prior to processing a shipment with the ELECTRONIC_TRADE_DOCUMENTS special service.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class EtdConfirmationType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'CONFIRMED'
+     * @return string 'CONFIRMED'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_CONFIRMED = 'CONFIRMED';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'DEFERRED'
+     * @return string 'DEFERRED'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_DEFERRED = 'DEFERRED';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +32,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_CONFIRMED
+     * @uses self::VALUE_DEFERRED
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_CONFIRMED,
+            self::VALUE_DEFERRED,
         );
     }
     /**

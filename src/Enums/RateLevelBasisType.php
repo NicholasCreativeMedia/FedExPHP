@@ -3,28 +3,21 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for RateLevelBasisType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class RateLevelBasisType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'BUNDLED_RATE'
+     * @return string 'BUNDLED_RATE'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_BUNDLED_RATE = 'BUNDLED_RATE';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'INDIVIDUAL_PACKAGE_RATE'
+     * @return string 'INDIVIDUAL_PACKAGE_RATE'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_INDIVIDUAL_PACKAGE_RATE = 'INDIVIDUAL_PACKAGE_RATE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +30,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_BUNDLED_RATE
+     * @uses self::VALUE_INDIVIDUAL_PACKAGE_RATE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_BUNDLED_RATE,
+            self::VALUE_INDIVIDUAL_PACKAGE_RATE,
         );
     }
     /**

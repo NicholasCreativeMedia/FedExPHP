@@ -3,28 +3,23 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for CountryRelationshipType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Describes relationship between origin and destination countries.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class CountryRelationshipType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'DOMESTIC'
+     * @return string 'DOMESTIC'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_DOMESTIC = 'DOMESTIC';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'INTERNATIONAL'
+     * @return string 'INTERNATIONAL'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_INTERNATIONAL = 'INTERNATIONAL';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +32,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_DOMESTIC
+     * @uses self::VALUE_INTERNATIONAL
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_DOMESTIC,
+            self::VALUE_INTERNATIONAL,
         );
     }
     /**

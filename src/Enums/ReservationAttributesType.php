@@ -3,28 +3,18 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for ReservationAttributesType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Attributes about a reservation at a FedEx location.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class ReservationAttributesType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'RESERVATION_AVAILABLE'
+     * @return string 'RESERVATION_AVAILABLE'
      */
-    const VALUE_FDXE = 'FDXE';
-    /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
-     */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_RESERVATION_AVAILABLE = 'RESERVATION_AVAILABLE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +27,13 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_RESERVATION_AVAILABLE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_RESERVATION_AVAILABLE,
         );
     }
     /**

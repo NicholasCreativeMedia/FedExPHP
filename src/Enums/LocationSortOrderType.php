@@ -3,28 +3,23 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for LocationSortOrderType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Specifies sort order of the location details.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class LocationSortOrderType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'HIGHEST_TO_LOWEST'
+     * @return string 'HIGHEST_TO_LOWEST'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_HIGHEST_TO_LOWEST = 'HIGHEST_TO_LOWEST';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'LOWEST_TO_HIGHEST'
+     * @return string 'LOWEST_TO_HIGHEST'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_LOWEST_TO_HIGHEST = 'LOWEST_TO_HIGHEST';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +32,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_HIGHEST_TO_LOWEST
+     * @uses self::VALUE_LOWEST_TO_HIGHEST
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_HIGHEST_TO_LOWEST,
+            self::VALUE_LOWEST_TO_HIGHEST,
         );
     }
     /**

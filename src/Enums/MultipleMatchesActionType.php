@@ -3,28 +3,26 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for MultipleMatchesActionType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class MultipleMatchesActionType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'RETURN_ALL'
+     * @return string 'RETURN_ALL'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_RETURN_ALL = 'RETURN_ALL';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'RETURN_ERROR'
+     * @return string 'RETURN_ERROR'
      */
-    const VALUE_FDXG = 'FDXG';
+    const VALUE_RETURN_ERROR = 'RETURN_ERROR';
     /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
+     * Constant for value 'RETURN_FIRST'
+     * @return string 'RETURN_FIRST'
      */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_RETURN_FIRST = 'RETURN_FIRST';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +35,17 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_RETURN_ALL
+     * @uses self::VALUE_RETURN_ERROR
+     * @uses self::VALUE_RETURN_FIRST
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_RETURN_ALL,
+            self::VALUE_RETURN_ERROR,
+            self::VALUE_RETURN_FIRST,
         );
     }
     /**

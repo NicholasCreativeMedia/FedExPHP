@@ -3,28 +3,18 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for LatestDropOffOverlayType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: Specifies the reason for the overlay of the daily last drop off time for a carrier.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class LatestDropOffOverlayType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'US_WEST_COAST'
+     * @return string 'US_WEST_COAST'
      */
-    const VALUE_FDXE = 'FDXE';
-    /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
-     */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_US_WEST_COAST = 'US_WEST_COAST';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +27,13 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_US_WEST_COAST
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_US_WEST_COAST,
         );
     }
     /**

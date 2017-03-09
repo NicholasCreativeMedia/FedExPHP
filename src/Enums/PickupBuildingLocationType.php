@@ -3,28 +3,31 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for PickupBuildingLocationType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class PickupBuildingLocationType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'FRONT'
+     * @return string 'FRONT'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_FRONT = 'FRONT';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'NONE'
+     * @return string 'NONE'
      */
-    const VALUE_FDXG = 'FDXG';
+    const VALUE_NONE = 'NONE';
     /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
+     * Constant for value 'REAR'
+     * @return string 'REAR'
      */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_REAR = 'REAR';
+    /**
+     * Constant for value 'SIDE'
+     * @return string 'SIDE'
+     */
+    const VALUE_SIDE = 'SIDE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +40,19 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_FRONT
+     * @uses self::VALUE_NONE
+     * @uses self::VALUE_REAR
+     * @uses self::VALUE_SIDE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_FRONT,
+            self::VALUE_NONE,
+            self::VALUE_REAR,
+            self::VALUE_SIDE,
         );
     }
     /**

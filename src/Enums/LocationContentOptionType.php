@@ -3,28 +3,26 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for LocationContentOptionType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class LocationContentOptionType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'HOLIDAYS'
+     * @return string 'HOLIDAYS'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_HOLIDAYS = 'HOLIDAYS';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'LOCATION_DROPOFF_TIMES'
+     * @return string 'LOCATION_DROPOFF_TIMES'
      */
-    const VALUE_FDXG = 'FDXG';
+    const VALUE_LOCATION_DROPOFF_TIMES = 'LOCATION_DROPOFF_TIMES';
     /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
+     * Constant for value 'MAP_URL'
+     * @return string 'MAP_URL'
      */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_MAP_URL = 'MAP_URL';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +35,17 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_HOLIDAYS
+     * @uses self::VALUE_LOCATION_DROPOFF_TIMES
+     * @uses self::VALUE_MAP_URL
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_HOLIDAYS,
+            self::VALUE_LOCATION_DROPOFF_TIMES,
+            self::VALUE_MAP_URL,
         );
     }
     /**

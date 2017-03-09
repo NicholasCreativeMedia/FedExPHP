@@ -3,28 +3,26 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for TruckType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class TruckType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'DROP_TRAILER_AGREEMENT'
+     * @return string 'DROP_TRAILER_AGREEMENT'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_DROP_TRAILER_AGREEMENT = 'DROP_TRAILER_AGREEMENT';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'LIFTGATE'
+     * @return string 'LIFTGATE'
      */
-    const VALUE_FDXG = 'FDXG';
+    const VALUE_LIFTGATE = 'LIFTGATE';
     /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
+     * Constant for value 'TRACTOR_TRAILER_ACCESS'
+     * @return string 'TRACTOR_TRAILER_ACCESS'
      */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_TRACTOR_TRAILER_ACCESS = 'TRACTOR_TRAILER_ACCESS';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +35,17 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_DROP_TRAILER_AGREEMENT
+     * @uses self::VALUE_LIFTGATE
+     * @uses self::VALUE_TRACTOR_TRAILER_ACCESS
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_DROP_TRAILER_AGREEMENT,
+            self::VALUE_LIFTGATE,
+            self::VALUE_TRACTOR_TRAILER_ACCESS,
         );
     }
     /**

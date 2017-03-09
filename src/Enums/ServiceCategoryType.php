@@ -3,28 +3,21 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * This class stands for ServiceCategoryType Enums
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class ServiceCategoryType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'EXPRESS_FREIGHT'
+     * @return string 'EXPRESS_FREIGHT'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_EXPRESS_FREIGHT = 'EXPRESS_FREIGHT';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'EXPRESS_PARCEL'
+     * @return string 'EXPRESS_PARCEL'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_EXPRESS_PARCEL = 'EXPRESS_PARCEL';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +30,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_EXPRESS_FREIGHT
+     * @uses self::VALUE_EXPRESS_PARCEL
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_EXPRESS_FREIGHT,
+            self::VALUE_EXPRESS_PARCEL,
         );
     }
     /**

@@ -29,14 +29,6 @@ class ClientDetail extends AbstractStructBase
      */
     public $MeterNumber;
     /**
-     * The IntegratorId
-     * Meta informations extracted from the WSDL
-     * - documentation: Only used in transactions which require identification of the FedEx Office integrator.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $IntegratorId;
-    /**
      * The Localization
      * Meta informations extracted from the WSDL
      * - documentation: The language to be used for human-readable Notification.localizedMessages in responses to the request containing this ClientDetail object. Different requests from the same client may contain different Localization data. (Contrast
@@ -49,19 +41,16 @@ class ClientDetail extends AbstractStructBase
      * Constructor method for ClientDetail
      * @uses ClientDetail::setAccountNumber()
      * @uses ClientDetail::setMeterNumber()
-     * @uses ClientDetail::setIntegratorId()
      * @uses ClientDetail::setLocalization()
      * @param string $accountNumber
      * @param string $meterNumber
-     * @param string $integratorId
      * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
      */
-    public function __construct($accountNumber = null, $meterNumber = null, $integratorId = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function __construct($accountNumber = null, $meterNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
     {
         $this
             ->setAccountNumber($accountNumber)
             ->setMeterNumber($meterNumber)
-            ->setIntegratorId($integratorId)
             ->setLocalization($localization);
     }
     /**
@@ -106,28 +95,6 @@ class ClientDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($meterNumber)), __LINE__);
         }
         $this->MeterNumber = $meterNumber;
-        return $this;
-    }
-    /**
-     * Get IntegratorId value
-     * @return string|null
-     */
-    public function getIntegratorId()
-    {
-        return $this->IntegratorId;
-    }
-    /**
-     * Set IntegratorId value
-     * @param string $integratorId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
-     */
-    public function setIntegratorId($integratorId = null)
-    {
-        // validation for constraint: string
-        if (!is_null($integratorId) && !is_string($integratorId)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($integratorId)), __LINE__);
-        }
-        $this->IntegratorId = $integratorId;
         return $this;
     }
     /**

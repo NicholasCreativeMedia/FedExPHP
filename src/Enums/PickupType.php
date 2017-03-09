@@ -3,28 +3,23 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for CarrierCodeType Enums
+ * This class stands for PickupType Enums
  * Meta informations extracted from the WSDL
- * - documentation: Identification of a FedEx operating company (transportation).
+ * - documentation: These values indicate the type of pickup being requested.
  * @subpackage Enumerations
  */
-class CarrierCodeType
+class PickupType
 {
     /**
-     * Constant for value 'FDXE'
-     * @return string 'FDXE'
+     * Constant for value 'ON_CALL'
+     * @return string 'ON_CALL'
      */
-    const VALUE_FDXE = 'FDXE';
+    const VALUE_ON_CALL = 'ON_CALL';
     /**
-     * Constant for value 'FDXG'
-     * @return string 'FDXG'
+     * Constant for value 'TAG'
+     * @return string 'TAG'
      */
-    const VALUE_FDXG = 'FDXG';
-    /**
-     * Constant for value 'FXSP'
-     * @return string 'FXSP'
-     */
-    const VALUE_FXSP = 'FXSP';
+    const VALUE_TAG = 'TAG';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -37,17 +32,15 @@ class CarrierCodeType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_FDXE
-     * @uses self::VALUE_FDXG
-     * @uses self::VALUE_FXSP
+     * @uses self::VALUE_ON_CALL
+     * @uses self::VALUE_TAG
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_FDXE,
-            self::VALUE_FDXG,
-            self::VALUE_FXSP,
+            self::VALUE_ON_CALL,
+            self::VALUE_TAG,
         );
     }
     /**
