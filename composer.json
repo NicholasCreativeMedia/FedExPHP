@@ -1,7 +1,7 @@
 {
   "name": "nicholascreativemedia/fedexphp",
   "type": "library",
-  "homepage": "https://github.com/NicholasCreativeMedia/FedExPHP"
+  "homepage": "https://github.com/NicholasCreativeMedia/FedExPHP",
   "description": "FedEx PHP package. Classes generated using wsdltophp/packagegenerator",
   "require": {
     "php": ">=5.3.3",
