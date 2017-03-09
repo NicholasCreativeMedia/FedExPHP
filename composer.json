@@ -3,7 +3,7 @@
   "type": "library",
   "homepage": "https://github.com/NicholasCreativeMedia/FedExPHP",
   "description": "FedEx PHP package. Classes generated using wsdltophp/packagegenerator",
-  "licence": "LGPL-3.0+",
+  "license": "LGPL-3.0+",
   "require": {
     "php": ">=5.3.3",
     "ext-soap": "*",
