@@ -1,0 +1,14 @@
+{
+  "name": "nicholascreativemedia/fedexphp",
+  "description": "FedEx PHP package. Classes generated using wsdltophp/packagegenerator",
+  "require": {
+    "php": ">=5.3.3",
+    "ext-soap": "*",
+    "wsdltophp/packagebase": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "NicholasCreativeMedia\\FedExPHP\\": "./src/"
+    }
+  }
+}
