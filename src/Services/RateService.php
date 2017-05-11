@@ -17,14 +17,16 @@ class RateService extends FedExService
      * @param bool $resetSoapClient
      * @param bool $beta
      */
-    public function __construct(array $wsdlOptions = array(), $resetSoapClient = true, $beta = false)
+    public function __construct(array $wsdlOptions = array(), $resetSoapClient = true, $mode = 'test')
     {
+        if ($mode === false) $mode = 'test';
+        if ($mode === true) $mode = 'live';
         $default_options = [
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl'.DIRECTORY_SEPARATOR.'RateService_v20.wsdl',
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'RateService_v20.wsdl',
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\RateClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
-        parent::__construct($options,$resetSoapClient,$beta);
+        parent::__construct($options,$resetSoapClient,$mode);
 
         $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('crs',20,0,0);
     }

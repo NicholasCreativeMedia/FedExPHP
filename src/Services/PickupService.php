@@ -17,14 +17,16 @@ class PickupService extends FedExService
      * @param bool $resetSoapClient
      * @param bool $beta
      */
-    public function __construct(array $wsdlOptions = array(), $resetSoapClient = true, $beta = false)
+    public function __construct(array $wsdlOptions = array(), $resetSoapClient = true, $mode = 'test')
     {
+        if ($mode === false) $mode = 'test';
+        if ($mode === true) $mode = 'live';
         $default_options = [
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl'.DIRECTORY_SEPARATOR.'PickupService_v13.wsdl',
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'PickupService_v13.wsdl',
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\PickupClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
-        parent::__construct($options,$resetSoapClient,$beta);
+        parent::__construct($options,$resetSoapClient,$mode);
 
         $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('disp',13,0,0);
     }
